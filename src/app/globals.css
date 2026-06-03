@@ -1,77 +1,26 @@
 @import "tailwindcss";
 
-:root {
-  /* fondos */
-  --cream:        #FBF5EA;
-  --cream-2:      #F4E9D6;
-  --paper:        #FFFCF6;
-  /* sage / matcha */
-  --sage:         #A7BD9B;
-  --sage-deep:    #7C9670;
-  --sage-soft:    #DEE8D4;
-  /* rosa polvo */
-  --pink:         #E9B5B2;
-  --pink-deep:    #D2807D;
-  --pink-soft:    #F7DCD9;
-  /* tierra / contornos */
-  --brown:        #B89A80;
-  --brown-line:   #9A7B63;
-  --ink:          #6E5645;
-  --ink-soft:     #9C8472;
-  /* acentos */
-  --butter:       #EFCF93;
-  --lilac:        #CDB6D8;
-  --sky:          #BCD3D6;
+@theme {
+  --font-pixelify: var(--font-pixelify), sans-serif;
 
-  /* radios */
-  --r-sm:  12px;
-  --r-md:  18px;
-  --r-lg:  26px;
+  --color-cream: #FBF5EA;
+  --color-cream-2: #F4E9D6;
+  --color-paper: #FFFCF6;
 
-  /* sombra base */
-  --shadow: 0 14px 30px -16px rgba(122, 92, 72, 0.45);
+  --color-sage: #A7BD9B;
+  --color-sage-deep: #7C9670;
+  --color-sage-soft: #DEE8D4;
+
+  --color-pink: #E9B5B2;
+  --color-pink-deep: #D2807D;
+  --color-pink-soft: #F7DCD9;
+
+  --color-brown: #B89A80;
+  --color-brown-line: #9A7B63;
+  --color-ink: #6E5645;
+  --color-ink-soft: #9C8472;
+
+  --color-butter: #EFCF93;
+  --color-lilac: #CDB6D8;
+  --color-sky: #BCD3D6;
 }
-
-/* ─── Reset mínimo ───────────────────────────────────────────── */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  -webkit-tap-highlight-color: transparent;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  font-family: var(--font-pixelify), monospace;
-  color: var(--ink);
-  background:
-    var(--cream);
-  min-height: 100%;
-}
-
-/* ─── Patrones de fondo ──────────────────────────────────────── */
-.gingham {
-  background-color: var(--cream);
-}
-
-.gingham-pink {
-  background-color: var(--cream);
-  background-image:
-    repeating-linear-gradient(  0deg, rgba(233,181,178,.26) 0 14px, transparent 14px 28px),
-    repeating-linear-gradient( 90deg, rgba(233,181,178,.26) 0 14px, transparent 14px 28px);
-}
-
-/* ─── Scrollbar invisible ────────────────────────────────────── */
-.no-scrollbar::-webkit-scrollbar { width: 0; height: 0; }
-.no-scrollbar { scrollbar-width: none; }
-
-/* ─── Scrollbar personalizada (zonas con overflow visible) ───── */
-::-webkit-scrollbar        { width: 4px; }
-::-webkit-scrollbar-track  { background: transparent; }
-::-webkit-scrollbar-thumb  { background: var(--brown); border-radius: 9999px; }
