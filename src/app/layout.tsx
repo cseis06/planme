@@ -1,8 +1,6 @@
 import "./globals.css";
 import { Pixelify_Sans } from "next/font/google";
 
-import BottomNav from "@/components/navigation/BottomNav";
-
 const pixelify = Pixelify_Sans({
   subsets: ["latin"],
   variable: "--font-pixelify",
@@ -15,13 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
-      <html lang="es" className={pixelify.variable}>
-        <body className="font-pixelify">
-          {children}
-          <BottomNav />
-        </body>
-      </html>
-    </>
+    <html lang="es" className={pixelify.variable}>
+      <body className="font-pixelify">{children}</body>
+    </html>
   );
 }
