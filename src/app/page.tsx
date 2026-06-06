@@ -1,9 +1,9 @@
-import BottomNav from "@/components/navigation/BottomNav";
+import React from 'react'
 
-export default function Home() {
+const page = () => {
   return (
-    <main className="">
-      
-    </main>
-  );
+    <div></div>
+  )
 }
+
+export default page
